@@ -20,8 +20,14 @@ requirements:
     - python {{ python_min }}
     - poetry-core >=1.0.0
     - pip
+    - python {{ python_min }}
   run:
-    - python >={{ python_min }},<4.0.0
+    - python {{ python_min }}
+    - outdated
+    - mne >=1.6.0
+    - numpy >=1.25.0
+    - pandas >=2.2.0
+    - scipy >=1.12.0
 
 test:
   imports:
@@ -37,6 +43,8 @@ about:
   summary: 'SlµArch (Sleep MicroArchitecture): open-source Python package to analyse sleep microarchitecture.'
   license: Apache-2.0
   license_file: LICENSE
+  doc_url: https://github.com/sjg2203/SluArch/blob/main/README.md
+  dev_url: https://github.com/sjg2203/SluArch
 
 extra:
   recipe-maintainers:
